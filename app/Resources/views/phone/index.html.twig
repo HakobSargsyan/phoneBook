@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h1>Phones list with Persons</h1><br><br>
+
+        <a href="{{ path('phone_new') }}" class="btn btn-info" role="button">Add New Record</a>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Person First Name</th>
+                <th>Person Last Name</th>
+                <th>Person Company</th>
+                <th>Phone Number</th>
+                <th>Update/Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for person in persons %}
+                <tr>
+                    <td><a href="{{ path('phone_show', { 'id': person.id }) }}">{{ person.id }}</a></td>
+                    <td>{{ person.firstname }}</td>
+                    <td>{{ person.lastname }}</td>
+                    <td>{{ person.company }}</td>
+                    <td>
+                        {% if person.phones is not empty %}
+                            {% for phone in person.phones  %}
+                                {{ phone.phoneNumber }} <br>
+                            {% endfor %}
+                            {% else %}
+                                There are no Phone number
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="{{ path('phone_show', { 'id': person.id }) }}" class="btn btn-primary" role="button">Details</a>
+                        <a href="{{ path('phone_edit', { 'id': person.id }) }}" class="btn btn-info" role="button">Edit</a>
+                        <a href="{{ path('phone_add_phone', { 'id': person.id }) }}" class="btn btn-info" role="button">Add Phone</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+

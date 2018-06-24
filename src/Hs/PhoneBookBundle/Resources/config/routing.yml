@@ -1,0 +1,6 @@
+hs_phone_book_phone:
+    resource: "@HsPhoneBookBundle/Resources/config/routing/phone.yml"
+    prefix:   /phone
+hs_phone_book_person:
+    resource: "@HsPhoneBookBundle/Resources/config/routing/person.yml"
+    prefix:   /person

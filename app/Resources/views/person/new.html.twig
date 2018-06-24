@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h1>Phone creation</h1>
+        {{ form_start(form) }}
+        <div class="" id="persons_list" data-prototype="{{form_widget(form.phones.vars.prototype) | e('html_attr')}}">
+            {% for row in form.phones %}
+                {{ form_row(row) }}
+            {% endfor %}
+        </div>
+        {{ form_end(form) }}
+        <a href="{{ path('person_index') }}" class="btn btn-info" role="button">Back to the list</a>
+    </div>
+{% endblock %}

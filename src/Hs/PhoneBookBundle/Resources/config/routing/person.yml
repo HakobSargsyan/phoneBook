@@ -1,0 +1,34 @@
+person_index:
+    path:     /
+    defaults: { _controller: "HsPhoneBookBundle:Person:index" }
+    methods:  GET
+
+person_add_phone:
+    path:     /{id}/add-phone
+    defaults: { _controller: "HsPhoneBookBundle:Person:addPhone" }
+    methods:  [GET, POST]
+
+search:
+    path:     /search
+    defaults: { _controller: "HsPhoneBookBundle:Person:search" }
+    methods:  POST
+
+person_show:
+    path:     /{id}/show
+    defaults: { _controller: "HsPhoneBookBundle:Person:show" }
+    methods:  GET
+
+person_new:
+    path:     /new
+    defaults: { _controller: "HsPhoneBookBundle:Person:new" }
+    methods:  [GET, POST]
+
+person_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "HsPhoneBookBundle:Person:edit" }
+    methods:  [GET, POST]
+
+person_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "HsPhoneBookBundle:Person:delete" }
+    methods:  DELETE

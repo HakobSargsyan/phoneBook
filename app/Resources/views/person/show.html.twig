@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <h1>Phone</h1>
+        {{ form_start(delete_form) }}
+            <input type="submit" value="Delete" class="btn btn-danger">
+        {{ form_end(delete_form) }}
+        <br>
+
+        <table class="table table-bordered">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ person.id }}</td>
+            </tr>
+            <tr>
+                <th>Phonenumber</th>
+                <td>{{ phone.phoneNumber }}</td>
+            </tr>
+            <tr>
+                <th>Zipcode</th>
+                <td>{{ phone.zipCode }}</td>
+            </tr>
+            <tr>
+                <th>First Name</th>
+                <td>{{ person.firstname}}</td>
+            </tr>
+            <tr>
+                <th>Last Name</th>
+                <td>{{ person.lastname }}</td>
+            </tr>
+            <tr>
+                <th>Company</th>
+                <td>{{ person.company }}</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="col-md-7">
+            <div class="col-md-4">
+                <a href="{{ path('person_index', { 'id': person.id }) }}" class="btn btn-primary" role="button">Back to the list</a>
+                <a href="{{ path('person_edit', { 'id': person.id }) }}" class="btn btn-success" role="button">Edit</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

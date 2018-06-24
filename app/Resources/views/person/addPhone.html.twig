@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% use "form_div_layout.html.twig" %}
+{% block body %}
+    <div class="container">
+        <h1>Add Phone For this Person</h1>
+
+        <div class="form-group">
+            {{ form_start(add_phone_form) }}
+                {{ form_widget(add_phone_form) }}
+                <input type="submit" value="save" class="btn btn-success">
+            {{ form_end(add_phone_form) }}
+        </div>
+    </div>
+{% endblock %}
