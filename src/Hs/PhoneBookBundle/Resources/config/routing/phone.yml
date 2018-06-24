@@ -1,24 +1,4 @@
-phone_index:
-    path:     /
-    defaults: { _controller: "HsPhoneBookBundle:Phone:index" }
-    methods:  GET
-
-phone_show:
-    path:     /{id}/show
-    defaults: { _controller: "HsPhoneBookBundle:Phone:show" }
-    methods:  GET
-
-phone_new:
-    path:     /new
-    defaults: { _controller: "HsPhoneBookBundle:Phone:new" }
-    methods:  [GET, POST]
-
 phone_edit:
     path:     /{id}/edit
     defaults: { _controller: "HsPhoneBookBundle:Phone:edit" }
     methods:  [GET, POST]
-
-phone_delete:
-    path:     /{id}/delete
-    defaults: { _controller: "HsPhoneBookBundle:Phone:delete" }
-    methods:  DELETE
