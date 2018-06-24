@@ -20,19 +20,16 @@ What's inside?
 </ul>
 
 <ul>
-  <li>1.Search person with First Name,Lastname and Phone Number via ajax call</li>
-  <li>2.Without ajax call</li>
-  <li>3.Main route is`[base_url]/person</li>
-  <li>4.I am used Hs\PhoneBookBundle for app</li>
+  <li>Search person with First Name,Last Name and Phone Number via ajax call</li>
+  <li>Without ajax call</li>
+  <li>Main route is`[base_url]/person</li>
+  <li>I am used Hs\PhoneBookBundle for app</li>
 </ul>
 
 
-n
+<h3>Nginx configuration for phoneBook app is</h3> 
 
-
-<h1>Nginx configuration for phoneBook App is</h1> 
-
-  server {
+   server{
   
     listen  80;
     
