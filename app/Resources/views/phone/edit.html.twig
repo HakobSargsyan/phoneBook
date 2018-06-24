@@ -15,4 +15,12 @@
 
         <a href="{{ path('person_index') }}" class="btn btn-info" role="button">Back to the list</a>
     </div>
+
+    {% if errors is defined %}
+        <ul>
+            {% for field, message in errors %}
+                <li>{{ field ~ ':' ~ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 {% endblock %}

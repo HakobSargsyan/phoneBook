@@ -8,6 +8,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
+use Symfony\Component\Validator\Validation;
 
 /**
  * Person controller.
@@ -49,7 +51,14 @@ class PersonController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($person);
             $em->flush();
-            return $this->redirectToRoute('person_show', array('id' => $person->getId()));
+            //return $this->redirectToRoute('person_show', array('id' => $person->getId()));
+        }else{
+            $errors = $form->getErrors();
+            return $this->render('person/new.html.twig',array(
+                'errors' => $errors,
+                'person' => $person,
+                'form' => $form->createView()
+            ));
         }
 
         return $this->render('person/new.html.twig', array(
@@ -70,27 +79,6 @@ class PersonController extends Controller
             'phone' => $phone,
             'person'=> $person,
             'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
-     * Displays a form to edit an existing person entity.
-     *
-     */
-    public function editAction(Request $request, Person $person)
-    {
-        $editForm = $this->createForm('Hs\PhoneBookBundle\Form\PersonType', $person);
-        $editForm->handleRequest($request);
-
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('phone_edit', array('id' => $person->getId()));
-        }
-
-        return $this->render('person/edit.html.twig', array(
-            'person' => $person,
-            'edit_form' => $editForm->createView(),
         ));
     }
 
@@ -160,7 +148,6 @@ class PersonController extends Controller
      */
     public function searchAction(Request $request){
         if ($request->isXmlHttpRequest()) {
-            $serializer = $this->get('jms_serializer');
             $search = $this->getDoctrine()
                 ->getRepository(Person::class)
                 ->findByLike($_POST['term']);
@@ -180,7 +167,7 @@ class PersonController extends Controller
 
             return $response;
         } else {
-            //if call is not ajax render another view
+            //if call is not ajax then render another view
             $search = $this->getDoctrine()
                 ->getRepository(Person::class)
                 ->findByLike($_POST['term']);

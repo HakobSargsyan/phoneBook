@@ -13,4 +13,28 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class PhoneController extends Controller
 {
+    /**
+     * Displays a form to edit an existing person entity.
+     *
+     */
+    public function editAction(Request $request, Person $person)
+    {
+        $editForm = $this->createForm('Hs\PhoneBookBundle\Form\PersonType', $person);
+        $editForm->handleRequest($request);
+
+        $validator = $this->get('validator');
+        $errors = $validator->validate($person);
+
+        if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('phone_edit', array('id' => $person->getId()));
+        }
+
+        return $this->render('phone/edit.html.twig', array(
+            'errors' => $errors,
+            'person' => $person,
+            'edit_form' => $editForm->createView(),
+        ));
+    }
 }

@@ -2,12 +2,14 @@
 
 namespace Hs\PhoneBookBundle\Form;
 
+use Hs\PhoneBookBundle\Entity\Person;
+use Hs\PhoneBookBundle\Entity\Phone;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
-
+use Symfony\Component\Validator\Constraints as Assert;
 
 class PersonType extends AbstractType
 {
@@ -24,8 +26,11 @@ class PersonType extends AbstractType
                     'label' => false
                 ],
                 'by_reference' => false,
+                'error_bubbling'=>true,
                 "allow_add" => true,
-                "allow_delete" => true
+                "allow_delete" => true,
+                'required'=>false,
+
             )
         );
 
@@ -45,6 +50,7 @@ class PersonType extends AbstractType
             'data_class' => 'Hs\PhoneBookBundle\Entity\Person'
         ));
     }
+
 
     /**
      * {@inheritdoc}

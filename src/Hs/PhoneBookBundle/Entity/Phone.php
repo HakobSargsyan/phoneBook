@@ -5,6 +5,7 @@ namespace Hs\PhoneBookBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Phone
@@ -36,14 +37,21 @@ class Phone
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 50,
+     *      minMessage = "Your first name must be at least {{ limit }} characters long",
+     *      maxMessage = "Your first name cannot be longer than {{ limit }} characters"
+     * )
+     * @Assert\Regex(pattern="/^\(0\)[0-9]*$/", message="Only Numbers")
      * @ORM\Column(name="phone_number", type="string", length=50)
      */
     private $phoneNumber;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="zip_code", type="string", length=50)
      */
     private $zipCode;
@@ -78,6 +86,11 @@ class Phone
      * @return string
      */
     public function getPhoneNumber()
+    {
+        return $this->phoneNumber;
+    }
+
+    public function __toString()
     {
         return $this->phoneNumber;
     }
@@ -119,9 +132,6 @@ class Phone
         return $this;
     }
 
-    public function __toString() {
-        return $this->phoneNumber;
-    }
 
     /**
      * Remove person

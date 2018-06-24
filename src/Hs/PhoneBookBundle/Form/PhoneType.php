@@ -22,7 +22,7 @@ class PhoneType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Hs\PhoneBookBundle\Entity\Phone'
+            'data_class' => 'Hs\PhoneBookBundle\Entity\Phone',
         ));
     }
 

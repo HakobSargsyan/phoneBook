@@ -3,6 +3,7 @@
 namespace Hs\PhoneBookBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Person
@@ -23,6 +24,7 @@ class Person
 
     /**
      * Many Persons have Many Phones.
+     * @Assert\NotBlank()
      * @ORM\ManyToMany(targetEntity="Phone",inversedBy="persons" ,cascade={"persist"})
      * @ORM\JoinTable(name="phones_persons")
      */
@@ -30,22 +32,40 @@ class Person
     
     /**
      * @var string
-     *
-     * @ORM\Column(name="firstname", type="string", length=50)
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 50,
+     *      minMessage = "Your first name must be at least {{ limit }} characters long",
+     *      maxMessage = "Your first name cannot be longer than {{ limit }} characters"
+     * )
+     * @ORM\Column(name="firstname", type="string")
      */
     private $firstname;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="lastname", type="string", length=50)
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 50,
+     *      minMessage = "Your first name must be at least {{ limit }} characters long",
+     *      maxMessage = "Your first name cannot be longer than {{ limit }} characters"
+     * )
+     * @ORM\Column(name="lastname", type="string")
      */
     private $lastname;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="company", type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 50,
+     *      minMessage = "Your first name must be at least {{ limit }} characters long",
+     *      maxMessage = "Your first name cannot be longer than {{ limit }} characters"
+     * )
+     * @ORM\Column(name="company", type="string")
      */
     private $company;
 

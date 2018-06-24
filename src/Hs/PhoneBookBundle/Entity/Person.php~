@@ -3,6 +3,7 @@
 namespace Hs\PhoneBookBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Person
@@ -30,22 +31,30 @@ class Person
     
     /**
      * @var string
-     *
-     * @ORM\Column(name="firstname", type="string", length=50)
+     * @Assert\NotBlank()
+     * @Assert\Length(max=5,min=1)
+     * @ORM\Column(name="firstname", type="string")
      */
     private $firstname;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="lastname", type="string", length=50)
+     * @Assert\NotBlank()
+     * @Assert\Length(max=5,min=1)
+     * @Assert\Regex(
+     *     pattern="/\d/",
+     *     match=false,
+     *     message="Your name cannot contain a number"
+     * )
+     * @ORM\Column(name="lastname", type="string")
      */
     private $lastname;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="company", type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(max=5,min=1)
+     * @ORM\Column(name="company", type="string")
      */
     private $company;
 
