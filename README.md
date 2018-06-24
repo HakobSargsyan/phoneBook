@@ -19,16 +19,26 @@ What's inside?
   <li>Use php bin/console doctrine:schema:update -- force for creata a tables</li>
 </ul>
 
-1.Search person with firstname,lastname and Phnone Number via ajax call
-2.Without ajax call
-3.Main route is ` base_url/person
-4.I am use Hs\PhoneBookBundle for app
+<ul>
+  <li>1.Search person with First Name,Lastname and Phone Number via ajax call</li>
+  <li>2.Without ajax call</li>
+  <li>3.Main route is`[base_url]/person</li>
+  <li>4.I am used Hs\PhoneBookBundle for app</li>
+</ul>
 
-Nginx configuration for app is 
-server {
+
+n
+
+
+<h1>Nginx configuration for phoneBook App is</h1> 
+
+  server {
+  
     listen  80;
+    
 	server_name phonebook.loc;
-	root     /home/sargsyan/projects/phoneBook/web/;
+	
+	root /home/sargsyan/projects/phoneBook/web/;
 	
     location / {
         # try to serve file directly, fallback to app.php
