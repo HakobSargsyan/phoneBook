@@ -50,7 +50,29 @@ class PersonRepository extends \Doctrine\ORM\EntityRepository
         }
     }
 
-    public function updateRelation(){
+    /**
+     * @param $term
+     * @return null
+     */
+    public function findByLike($term){
+        $parameters = array(
+            'term' => '%' .$term. '%'
+        );
+        $query = $this->createQueryBuilder('p')
+            ->leftJoin('p.phones', 'pp')
+            ->where("p.firstname LIKE :term")
+            ->orWhere("p.lastname LIKE :term")
+            ->orWhere("pp.phoneNumber LIKE :term")
+            ->setParameters($parameters)
+            ->getQuery();
 
+
+        try {
+            return $query->getResult();
+        }
+        catch (\Doctrine\ORM\NoResultException $e)
+        {
+            return null;
+        }
     }
 }

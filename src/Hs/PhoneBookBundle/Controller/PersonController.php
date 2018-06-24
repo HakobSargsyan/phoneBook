@@ -7,6 +7,7 @@ use Hs\PhoneBookBundle\Entity\Phone;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Person controller.
@@ -153,9 +154,45 @@ class PersonController extends Controller
         ));
     }
 
+    /**
+     * @param Request $request
+     * @return Response
+     */
     public function searchAction(Request $request){
-       /* dump($request);die;
-        return $this->render('person/search.html.twig', array(
-        ));*/
+        if ($request->isXmlHttpRequest()) {
+            $serializer = $this->get('jms_serializer');
+            $search = $this->getDoctrine()
+                ->getRepository(Person::class)
+                ->findByLike($_POST['term']);
+
+            //get the HTML markup corresponding to the table
+            $data = $this->render('person/ajax.html.twig', array(
+                'persons' => $search,
+            ));
+            $html = $data->getContent();
+
+            //set Response data
+            $response = new Response();
+            $response->setContent(json_encode(array(
+                'data' => $html,
+            )));
+            $response->headers->set('Content-Type', 'application/json');
+
+            return $response;
+        } else {
+            //if call is not ajax render another view
+            $search = $this->getDoctrine()
+                ->getRepository(Person::class)
+                ->findByLike($_POST['term']);
+            $searchForm = $this->createFormBuilder(null)
+                ->add("search",TextType::class)
+                ->getForm();
+
+            return $this->render('person/index.html.twig', array(
+                'persons' => $search,
+                'form' => $searchForm->createView()
+            ));
+
+        }
     }
 }
