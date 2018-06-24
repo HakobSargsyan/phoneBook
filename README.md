@@ -15,13 +15,13 @@ What's inside?
 -------------
 
 <ul>
-  <li>Use php bin/console doctrine:database:create for create a database</li>
-  <li>Use php bin/console doctrine:schema:update -- force for create a tables</li>
+  <li>Use php bin/console doctrine:database:create to create a database</li>
+  <li>Use php bin/console doctrine:schema:update -- force to create a tables</li>
 </ul>
 
 <ul>
   <li>Search person with First Name,Last Name and Phone Number via ajax call</li>
-  <li>Without ajax call</li>
+  <li>Search person with First Name,Last Name and Phone Number without ajax call</li>
   <li>Main route is`[base_url]/person</li>
   <li>I used Hs\PhoneBookBundle for app</li>
   <li>I used Bootstrap css for all styles</li>
