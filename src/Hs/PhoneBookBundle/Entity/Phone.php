@@ -44,7 +44,7 @@ class Phone
      *      minMessage = "Your first name must be at least {{ limit }} characters long",
      *      maxMessage = "Your first name cannot be longer than {{ limit }} characters"
      * )
-     * @Assert\Regex(pattern="/^\(0\)[0-9]*$/", message="Only Numbers")
+     * @Assert\Regex(pattern="/[0-9]/", message="Only Numbers")
      * @ORM\Column(name="phone_number", type="string", length=50)
      */
     private $phoneNumber;

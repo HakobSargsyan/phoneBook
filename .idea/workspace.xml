@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53e88a79-a280-44d6-9a8e-f53245968274" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/phone/edit.html.twig" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/person/addPhone.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/person/addPhone.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/person/edit.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/person/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/person/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/person/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/person/new.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/person/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/person/show.html.twig" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
       <change beforePath="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Controller/PersonController.php" afterPath="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Controller/PersonController.php" />
-      <change beforePath="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Controller/PhoneController.php" afterPath="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Controller/PhoneController.php" />
-      <change beforePath="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Entity/Person.php" afterPath="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Entity/Person.php" />
       <change beforePath="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Entity/Phone.php" afterPath="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Entity/Phone.php" />
-      <change beforePath="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Form/PersonType.php" afterPath="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Form/PersonType.php" />
-      <change beforePath="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Form/PhoneType.php" afterPath="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Form/PhoneType.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PersonController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PersonController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Hs/PhoneBookBundle/Controller/PersonController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-540">
-              <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+            <state relative-caret-position="390">
+              <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
               <folding>
                 <element signature="e#49#86#0#PHP" expanded="true" />
               </folding>
@@ -95,8 +82,8 @@
       <file leaf-file-name="Phone.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Hs/PhoneBookBundle/Entity/Phone.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+            <state relative-caret-position="489">
+              <caret line="46" column="36" lean-forward="false" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
               <folding>
                 <element signature="e#45#77#0#PHP" expanded="true" />
               </folding>
@@ -114,10 +101,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonType.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PersonType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Hs/PhoneBookBundle/Form/PersonType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-163">
+            <state relative-caret-position="300">
               <caret line="20" column="66" lean-forward="false" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
               <folding>
                 <element signature="e#43#80#0#PHP" expanded="true" />
@@ -201,13 +188,13 @@
         <option value="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Controller/PhoneController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/person/show.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Controller/PersonController.php" />
         <option value="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Entity/Person.php" />
-        <option value="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Entity/Phone.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/person/addPhone.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/person/new.html.twig" />
         <option value="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Form/PersonType.php" />
         <option value="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Form/PhoneType.php" />
+        <option value="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Entity/Phone.php" />
+        <option value="$PROJECT_DIR$/src/Hs/PhoneBookBundle/Controller/PersonController.php" />
       </list>
     </option>
   </component>
@@ -478,12 +465,12 @@
       <option name="presentableId" value="Default" />
       <updated>1529609231471</updated>
       <workItem from="1529609232651" duration="39000" />
-      <workItem from="1529609322097" duration="90247000" />
+      <workItem from="1529609322097" duration="90453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90286000" />
+    <option name="totallyTimeSpent" value="90492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="20" width="1368" height="741" extended-state="6" />
@@ -851,24 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hs/PhoneBookBundle/Controller/PersonController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-          <folding>
-            <element signature="e#49#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hs/PhoneBookBundle/Controller/PhoneController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/person/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
@@ -890,16 +859,6 @@
         <state relative-caret-position="-915">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="54" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hs/PhoneBookBundle/Entity/Phone.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
-          <folding>
-            <element signature="e#45#77#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -929,10 +888,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Hs/PhoneBookBundle/Form/PersonType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-163">
+        <state relative-caret-position="300">
           <caret line="20" column="66" lean-forward="false" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
           <folding>
             <element signature="e#43#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hs/PhoneBookBundle/Entity/Phone.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="46" column="36" lean-forward="false" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+          <folding>
+            <element signature="e#45#77#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hs/PhoneBookBundle/Controller/PhoneController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hs/PhoneBookBundle/Controller/PersonController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+          <folding>
+            <element signature="e#49#86#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

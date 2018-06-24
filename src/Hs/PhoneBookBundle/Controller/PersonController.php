@@ -51,7 +51,7 @@ class PersonController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($person);
             $em->flush();
-            //return $this->redirectToRoute('person_show', array('id' => $person->getId()));
+            return $this->redirectToRoute('person_show', array('id' => $person->getId()));
         }else{
             $errors = $form->getErrors();
             return $this->render('person/new.html.twig',array(
