@@ -23,8 +23,8 @@ What's inside?
   <li>Search person with First Name,Last Name and Phone Number via ajax call</li>
   <li>Search person with First Name,Last Name and Phone Number without ajax call</li>
   <li>Main route is`[base_url]/person</li>
-  <li>I used Hs\PhoneBookBundle for app</li>
-  <li>I used Bootstrap css for all styles</li>
+  <li>Bundle:Hs\PhoneBookBundle is used for app </li>
+  <li>Bootstrap css is used for all styles </li>
 </ul>
 
 
